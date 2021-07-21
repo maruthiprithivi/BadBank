@@ -11,6 +11,7 @@ function Login() {
   if (loggedin) {
     var user = ctx.state.userNumber;
     var name = ctx.users[user].name;
+    // setShow(false);
   }
 
   function login() {
@@ -48,7 +49,7 @@ function Login() {
       header='Login'
       status={status}
       body={
-        show ? (
+        !loggedin ? (
           <>
             {!valid && <Alert text={text} />}
             {/* <br /> */}
